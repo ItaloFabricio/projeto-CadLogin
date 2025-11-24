@@ -15,7 +15,7 @@
   </head>
   <body>
     <section class="formWrapper">
-      <form class="formLogin">
+      <form class="formLogin" method='post'>
         <fieldset>
           <div class="img-container">
             <!-- <a href="https://avati.com.br/" target="_blank">
@@ -26,11 +26,11 @@
 
           <div class="input-wrapper">
             <div class="input-container">
-              <label for="user">Nome de usuário (e-mail)</label>
+              <label for="email">Nome de usuário (e-mail)</label>
               <input
                 type="text"
-                id="user"
-                name="user"
+                id="email"
+                name="email"
                 data-rules="required|email"
                 autofocus
                 placeholder="Digite o seu user ou email "
@@ -39,11 +39,11 @@
             </div>
 
             <div class="input-container">
-              <label for="pass">Senha</label>
+              <label for="password">Senha</label>
               <input
                 type="password"
-                id="pass"
-                name="pass"
+                id="password"
+                name="senha"
                 data-rules="required|min=6"
                 placeholder="Digite sua senha"
               />
@@ -52,8 +52,11 @@
           </div>
 
           <input type="submit" value="Entrar" class="btn" />
+
+          <a href="index.php?action=register" class="register-link">Não tem uma conta ? Cadastre-se.</a>
         </fieldset>
       </form>
+
     </section>
 
     <script>
