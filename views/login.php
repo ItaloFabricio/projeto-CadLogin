@@ -15,7 +15,7 @@
   </head>
   <body>
     <section class="formWrapper">
-      <form class="formLogin" method='post'>
+      <form class="formLogin" method='post' action='index.php?action=login'>
         <fieldset>
           <div class="img-container">
             <!-- <a href="https://avati.com.br/" target="_blank">
