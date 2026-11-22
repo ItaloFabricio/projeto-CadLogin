@@ -15,6 +15,7 @@
 
                     $_SESSION['usuario_id'] = $user['id'];
                     $_SESSION['perfil'] = $user['perfil'];
+                    $_SESSION['nome'] = $user['nome'];
 
                     header('Location: index.php?action=dashboard');
                 } else {
@@ -23,6 +24,12 @@
             } else {
                 include 'views/login.php';
             }
+        }
+
+        public function logout() {
+            session_start();
+            session_destroy();
+            header('Location: index.php?action=login');
         }
     }
 
