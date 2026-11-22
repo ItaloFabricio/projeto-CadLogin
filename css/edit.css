@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #e9f035;
+  --black-dark: #06090f;
+  --black-light: #151b26;
+  --white-light: #fafcfc;
+  --white-normal: #e8ebf0;
+  --dark-yellow: #edde4b;
+  --gray-5: #717274;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.edit-body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Archivo", sans-serif;
+  background: var(--black-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.edit-container {
+  width: 400px;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.edit-container h2 {
+  margin: 0 0 32px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--white-light);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.edit-form label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: var(--white-normal);
+}
+
+.edit-form input,
+.edit-form select {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0 24px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: var(--black-light);
+  color: var(--white-normal);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+  outline: none;
+  border: 1px solid var(--dark-yellow);
+}
+
+.edit-form input::placeholder {
+  color: var(--gray-5);
+}
+
+.edit-form .btn {
+  width: 100%;
+  height: 45px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--black-dark);
+  background: var(--primary-color);
+  transition: background 0.2s;
+}
+
+.edit-form .btn:hover {
+  background: var(--dark-yellow);
+}
+
+.back-link {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  color: var(--white-light);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+}

@@ -1,0 +1,123 @@
+:root {
+  --primary-color: #e9f035;
+  --black-dark: #06090f;
+  --black-light: #151b26;
+  --white-light: #fafcfc;
+  --white-normal: #e8ebf0;
+  --dark-yellow: #edde4b;
+  --gray-1: #1a202c;
+  --gray-2: #2b2b2c;
+  --gray-3: #424344;
+  --gray-4: #595a5c;
+  --gray-5: #717274;
+  --red: #f03d3d;
+  --red-light: #5a000086;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Archivo", sans-serif;
+  background: var(--black-dark);
+  color: var(--white-normal);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.container h2 {
+  margin: 0 0 32px 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--white-light);
+  text-align: center;
+}
+
+/* Tabela */
+.styled-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--black-light);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.styled-table thead th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--black-dark);
+  background: var(--primary-color);
+}
+
+.styled-table tbody td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--gray-1);
+  color: var(--white-normal);
+}
+
+.styled-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.styled-table tbody tr:hover {
+  background: var(--gray-1);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black-dark);
+  background: var(--primary-color);
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: var(--dark-yellow);
+}
+
+.btn-delete {
+  color: var(--white-light);
+  background: var(--red-light);
+  border: 1px solid var(--red);
+}
+
+.btn-delete:hover {
+  background: var(--red);
+}
+
+/* Botão "Voltar ao Dashboard" fora da tabela */
+.container > .btn {
+  margin-top: 24px;
+  padding: 12px 24px;
+}
+
+/* Responsivo: tabela rola na horizontal em telas pequenas */
+@media screen and (max-width: 770px) {
+  .container {
+    padding: 32px 12px;
+    overflow-x: auto;
+  }
+
+  .styled-table {
+    min-width: 600px;
+  }
+}
