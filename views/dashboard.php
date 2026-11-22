@@ -9,7 +9,7 @@
 <body>
     <body class="<? $_SESSION['perfil']?>"> <!-- Define a classe com base no perfil -->
         <div class="container">
-            <h1>Bem-vindo, <? $_SESSION['perfil']?></h1>
+            <h1>Bem-vindo, <?= $_SESSION['nome']?>! ☺️</h1>
             <p>Esta é a visão do perfil <?=  $_SESSION['perfil']?></p>
 
             <?php if($_SESSION['perfil'] == 'admin'): ?>
