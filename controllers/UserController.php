@@ -47,4 +47,9 @@ class UserController
         $users = User::all();
         include 'views/list_user.php';
     }
+
+    public function delete($id) {
+        User::delete($id);
+        header('Location: index.php?action=list');
+    }
 }
