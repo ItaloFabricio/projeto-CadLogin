@@ -16,6 +16,9 @@ switch ($action) {
     case 'login':
         $authController->login();
         break;
+    case 'logout':
+        $authController->logout();
+        break;
     case 'register':
         $userController->register();
         break;
@@ -28,6 +31,10 @@ switch ($action) {
     case 'edit':
         $id = $_GET['id'];
         $userController->edit($id);
+        break;
+    case 'delete':
+        $id = $_GET['id'];
+        $userController->delete($id);
         break;
     default:
         $authController->login();
