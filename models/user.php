@@ -62,5 +62,6 @@ class User
         $conn = Database::getConnection();
         $stmt = $conn->prepare("DELETE FROM usuarios WHERE id = :id");
         $stmt->execute(['id' => $id]);
+         return $stmt->rowCount() > 0;
     }
 }
