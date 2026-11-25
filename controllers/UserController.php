@@ -26,7 +26,7 @@ class UserController
         session_start();
         if ($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor') {
             $user = User::find($id);
-            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $data = [
                     'nome' => $_POST['nome'],
                     'email' => $_POST['email'],
@@ -43,13 +43,22 @@ class UserController
         }
     }
 
-    public function list() {
+    public function list()
+    {
         $users = User::all();
         include 'views/list_user.php';
     }
 
-    public function delete($id) {
-        User::delete($id);
+    public function delete($id)
+    {
+        session_start();
+        if (User::delete($id)) {
+            Flash::set('success', 'Usuário excluído com sucesso.');
+        } else {
+            Flash::set('error', 'Usuário não encontrado.');
+        }
+
         header('Location: index.php?action=list');
+        exit;
     }
 }

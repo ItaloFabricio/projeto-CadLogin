@@ -3,6 +3,7 @@
 require 'controllers/AuthController.php';
 require 'controllers/UserController.php';
 require 'controllers/DashboardController.php';
+require 'helpers/Flash.php';
 
 //Cria instância de controlador
 $authController = new AuthController();
