@@ -17,9 +17,11 @@ if (isset($_SESSION['perfil'])):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lista de Usuários</title>
         <link rel="stylesheet" type="text/css" href="css/list.css">
+        <link rel="stylesheet" href="css/flash.css">
     </head>
 
     <body class="<?= $_SESSION['perfil'] ?>">
+        <?php include 'views/partials/flash.php'; ?>
 
         <div class="container">
             <h2>Lista de Usuários</h2>
